@@ -100,7 +100,7 @@ const Header: React.FC = () => {
 
             {/* WhatsApp CTA - Desktop */}
             <a
-              href="https://wa.me/97430773176?text=Hello%2C%20I%20am%20interested%20in%20your%20professional%20cleaning%20and%20facility%20management%20services.%20Please%20share%20more%20details."
+              href="https://wa.me/974307733060?text=Hello%2C%20I%20am%20interested%20in%20your%20professional%20cleaning%20and%20facility%20management%20services.%20Please%20share%20more%20details."
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center gap-2 btn-gold px-4 py-2 rounded-lg text-sm font-semibold"

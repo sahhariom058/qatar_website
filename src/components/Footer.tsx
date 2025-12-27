@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { MapPin, Mail, Phone, MessageCircle } from 'lucide-react';
+import { MapPin, Mail, MessageCircle } from 'lucide-react';
 import SocialIcons from './SocialIcons';
 
 const Footer: React.FC = () => {
@@ -21,64 +21,69 @@ const Footer: React.FC = () => {
     'info@excitel-ts.com',
   ];
 
-  const whatsappNumbers = [
-    { number: '+974 30773060', display: '+974 30773060' },
-  ];
+  const whatsappNumber = '+97430773060';
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 md:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Company Info */}
-          <div className="text-left space-y-4">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-primary font-bold text-xl">E</span>
+    <footer
+      className="
+        bg-[#0F172A] text-[#E2E8F0] /* Light mode: dark navy background with light text */
+        dark:bg-gradient-to-b dark:from-[#0C1A2A] dark:to-[#0A1220]
+        dark:text-[#E5E7EB]
+      "
+    >
+      <div className="container mx-auto px-4 md:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+          {/* Company */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="w-11 h-11 rounded-lg bg-[#D4AF37] text-[#0A1220] font-bold text-xl flex items-center justify-center">
+                E
               </div>
               <div>
                 <h3 className="font-bold text-lg">EXCITEL</h3>
-                <p className="text-primary-foreground/70 text-sm">Trading & Services</p>
+                <p className="text-sm text-[#CBD5E1]">
+                  Trading & Services
+                </p>
               </div>
             </div>
-            <p className="text-primary-foreground/80 text-sm">
-              {t('footer.companyName')}
+
+            <p className="text-sm text-[#CBD5E1]">
+              EXCITEL TRADING & SERVICES W.L.L
             </p>
-            <p className="text-primary-foreground/60 text-sm">
-              {t('footer.crNo')}
+            <p className="text-sm text-[#94A3B8]">
+              C.R. No: 101445
             </p>
-            
-            {/* Social Icons */}
+
             <SocialIcons className="mt-4" iconSize={18} />
 
-            {/* Language Toggle */}
-            <div className="flex items-center gap-2 pt-2">
-              <span className="text-sm text-primary-foreground/70">
+            {/* Language */}
+            <div className="flex items-center gap-2 pt-3">
+              <span className="text-sm text-[#CBD5E1]">
                 {language === 'en' ? 'Language:' : 'اللغة:'}
               </span>
-              <div className="flex items-center border border-primary-foreground/30 rounded-lg overflow-hidden">
+              <div className="flex border border-[#475569] dark:border-white/10 rounded-md overflow-hidden">
                 <button
                   onClick={() => setLanguage('en')}
-                  className={`px-3 py-1.5 text-xs font-semibold transition-all ${
+                  className={`px-3 py-1 text-xs font-semibold transition-colors ${
                     language === 'en'
-                      ? 'bg-accent text-primary'
-                      : 'bg-transparent text-primary-foreground hover:bg-primary-foreground/10'
+                      ? 'bg-[#D4AF37] text-[#0A1220]'
+                      : 'hover:bg-[#1E293B]'
                   }`}
                 >
                   EN
                 </button>
                 <button
                   onClick={() => setLanguage('ar')}
-                  className={`px-3 py-1.5 text-xs font-semibold transition-all ${
+                  className={`px-3 py-1 text-xs font-semibold transition-colors ${
                     language === 'ar'
-                      ? 'bg-accent text-primary'
-                      : 'bg-transparent text-primary-foreground hover:bg-primary-foreground/10'
+                      ? 'bg-[#D4AF37] text-[#0A1220]'
+                      : 'hover:bg-[#1E293B]'
                   }`}
                 >
                   AR
@@ -88,92 +93,72 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="text-left">
-            <h4 className="font-semibold text-lg mb-6">{t('footer.quickLinks')}</h4>
-            <nav className="flex flex-col gap-3">
-              {quickLinks.map((link) => (
+          <div>
+            <h4 className="font-semibold text-lg mb-6">Quick Links</h4>
+            <div className="flex flex-col gap-3">
+              {quickLinks.map(link => (
                 <button
                   key={link.key}
                   onClick={() => scrollToSection(link.href)}
-                  className="text-primary-foreground/80 hover:text-accent transition-colors text-sm text-left"
+                  className="text-sm text-[#CBD5E1] hover:text-[#D4AF37] text-left transition-colors"
                 >
                   {t(link.key)}
                 </button>
               ))}
-            </nav>
-          </div>
-
-          {/* Contact Info */}
-          <div className="text-left">
-            <h4 className="font-semibold text-lg mb-6">{t('footer.contactInfo')}</h4>
-            
-            {/* Address */}
-            <div className="flex items-start gap-3 mb-4">
-              <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-              <div>
-                <p className="text-primary-foreground/80 text-sm">
-                  {t('contact.addressLine')}
-                </p>
-                <a
-                  href="https://maps.google.com/?q=Doha+Qatar+Zone+7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent text-sm hover:underline mt-1 inline-block"
-                >
-                  {t('contact.getDirections')}
-                </a>
-              </div>
-            </div>
-
-            {/* WhatsApp */}
-            <div className="flex items-start gap-3 mb-4">
-              <MessageCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-              <div className="flex flex-col gap-1">
-                {whatsappNumbers.map((item) => (
-                  <a
-                    key={item.number}
-                    href={`https://wa.me/${item.number.replace(/\s/g, '').replace('+', '')}?text=Hello%2C%20I%20contacted%20you%20from%20your%20website.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
-                  >
-                    {item.display}
-                  </a>
-                ))}
-              </div>
             </div>
           </div>
 
-          {/* Email Addresses */}
-          <div className="text-left">
-            <h4 className="font-semibold text-lg mb-6">{t('contact.email')}</h4>
-            <div className="flex items-start gap-3">
-              <Mail className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-              <div className="flex flex-col gap-2">
-                {emails.map((email) => (
+          {/* Contact */}
+          <div>
+            <h4 className="font-semibold text-lg mb-6">Contact Information</h4>
+
+            <div className="flex items-start gap-3 mb-4">
+              <MapPin className="w-5 h-5 text-[#D4AF37] mt-1" />
+              <p className="text-sm text-[#CBD5E1] leading-relaxed">
+                Office No: 3, Building No: 17, Street No: 910,<br />
+                Zone No: 7, Doha – Qatar
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <MessageCircle className="w-5 h-5 text-[#D4AF37]" />
+              <a
+                href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-[#CBD5E1] hover:text-[#D4AF37] transition-colors"
+              >
+                +974 3077 3060
+              </a>
+            </div>
+          </div>
+
+          {/* Email */}
+          <div>
+            <h4 className="font-semibold text-lg mb-6">Email</h4>
+            <div className="flex flex-col gap-3">
+              {emails.map(email => (
+                <div key={email} className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-[#D4AF37]" />
                   <a
-                    key={email}
                     href={`mailto:${email}`}
-                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+                    className="text-sm text-[#CBD5E1] hover:text-[#D4AF37] transition-colors"
                   >
                     {email}
                   </a>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
+
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/10 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-primary-foreground/60 text-sm">
-              © {new Date().getFullYear()} {t('footer.companyName')}. {t('footer.rights')}.
-            </p>
-            <div className="flex items-center gap-4">
-              <SocialIcons iconSize={16} />
-            </div>
-          </div>
+        {/* Bottom */}
+        <div className="border-t border-[#334155] dark:border-white/10 mt-14 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-[#94A3B8]">
+            © {new Date().getFullYear()} EXCITEL TRADING & SERVICES W.L.L. All Rights Reserved.
+          </p>
+          <SocialIcons iconSize={16} />
         </div>
       </div>
     </footer>

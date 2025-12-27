@@ -136,18 +136,23 @@ const ServicesSection: React.FC = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-6">
           {services.map((service, index) => (
-            <ServiceCard
-              key={service.titleKey}
-              icon={service.icon}
-              titleKey={service.titleKey}
-              descKey={service.descKey}
-              detailsKey={service.detailsKey}
-              image={service.image}
-              index={index}
-            />
-          ))}
+  <div
+    key={service.titleKey}
+    className={index === services.length - 1 ? "lg:col-span-3" : ""}
+  >
+    <ServiceCard
+      icon={service.icon}
+      titleKey={service.titleKey}
+      descKey={service.descKey}
+      detailsKey={service.detailsKey}
+      image={service.image}
+      index={index}
+    />
+  </div>
+))}
+
         </div>
       </div>
     </section>
