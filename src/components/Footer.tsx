@@ -151,12 +151,14 @@ const Footer: React.FC = () => {
           </div>
 
           {/* RIGHT SIDE – IMAGE */}
-          <div className="relative hidden lg:block">
+         <div className="relative block w-full">
+
             <div className="absolute inset-0 bg-[#D4AF37]/10 blur-3xl rounded-3xl" />
             <img
               src="/images/footer-right.jpg"
               alt="Excitel Trading & Services Qatar"
-              className="relative w-full h-[340px] object-cover rounded-3xl shadow-xl border border-white/10"
+              className="relative w-full h-[220px] md:h-[280px] lg:h-[340px] object-cover rounded-3xl shadow-xl border border-white/10"
+
             />
           </div>
 

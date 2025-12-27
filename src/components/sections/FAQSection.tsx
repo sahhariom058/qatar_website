@@ -47,11 +47,13 @@ const FAQSection: React.FC = () => {
 
           {/* LEFT: FAQ (UNCHANGED) */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="relative block w-full mt-10 lg:mt-0"
+>
+
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
@@ -76,13 +78,15 @@ const FAQSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative hidden lg:block"
+            className="relative block w-full mt-10 lg:mt-0"
+
           >
             <div className="absolute inset-0 bg-[#D4AF37]/10 blur-3xl rounded-3xl" />
             <img
               src="/images/faq-right.jpg"
               alt="Cleaning services in Qatar"
-              className="relative w-full h-[520px] object-cover rounded-3xl shadow-xl border border-border"
+              className="relative w-full h-[220px] md:h-[320px] lg:h-[520px]
+ object-cover rounded-3xl shadow-xl border border-border"
 
             />
           </motion.div>
