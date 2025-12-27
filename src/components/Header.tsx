@@ -32,12 +32,36 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg md:text-xl">E</span>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-sm md:text-base font-bold text-primary leading-tight">EXCITEL</h1>
-              <p className="text-xs text-muted-foreground">Trading & Services</p>
+            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+  <img
+    src="/images/logo.png"
+    alt="EXCITEL Trading & Services"
+    className="w-full h-full object-contain"
+  />
+</div>
+
+            <div className="flex flex-col leading-tight">
+              <h1
+  className="
+    text-sm md:text-base font-extrabold
+    text-slate-900
+    dark:text-white
+  "
+>
+  EXCITEL
+</h1>
+
+<p
+  className="
+    text-[11px] md:text-xs
+    font-medium
+    text-slate-800
+    dark:text-slate-300
+  "
+>
+  Trading & Services
+</p>
+
             </div>
           </div>
 
@@ -100,7 +124,7 @@ const Header: React.FC = () => {
 
             {/* WhatsApp CTA - Desktop */}
             <a
-              href="https://wa.me/974307733060?text=Hello%2C%20I%20am%20interested%20in%20your%20professional%20cleaning%20and%20facility%20management%20services.%20Please%20share%20more%20details."
+              href="https://wa.me/97430773176?text=Hello%2C%20I%20am%20interested%20in%20your%20professional%20cleaning%20and%20facility%20management%20services.%20Please%20share%20more%20details."
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center gap-2 btn-gold px-4 py-2 rounded-lg text-sm font-semibold"

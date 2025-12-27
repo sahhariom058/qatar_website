@@ -191,24 +191,28 @@ hover:text-accent truncate">
             transition={{ duration: 0.8, delay: 0.3 }}
             className="order-1 lg:order-2"
           >
-            <div className="relative">
+            <div className="relative overflow-visible">
+
               <div className="absolute inset-0 bg-accent/20 rounded-2xl blur-3xl transform -rotate-3" />
               <img
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=90"
-                alt="Professional cleaning service in Qatar"
-                className="relative w-full h-[240px] sm:h-[300px] md:h-[380px] object-cover rounded-2xl shadow-2xl border-4 border-white/20"
-              />
-              <div className="absolute -bottom-3 -left-3 bg-card p-3 rounded-lg shadow-lg border border-border hidden sm:block">
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
-                    <Award className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-sm">10+ Years</p>
-                    <p className="text-xs text-muted-foreground">Experience</p>
-                  </div>
-                </div>
-              </div>
+  src="/images/hero-cleaning.jpg"
+  alt="Professional cleaning service in Qatar"
+  className="relative w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-white/20"
+/>
+
+
+            <div className="absolute bottom-4 left-4 z-20 bg-yellow-500 p-3 rounded-lg shadow-xl border border-yellow-400">
+  <div className="flex items-center gap-2">
+    <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+      <Award className="w-5 h-5 text-yellow-600" />
+    </div>
+    <div>
+      <p className="font-bold text-sm text-black">10+ Years</p>
+      <p className="text-xs text-black/80">Experience</p>
+    </div>
+  </div>
+</div>
+
               <div className="absolute -top-3 -right-3 bg-card p-2.5 rounded-lg shadow-lg border border-border hidden sm:block">
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-accent" />
