@@ -96,7 +96,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, titleKey, descKey, deta
 
         {/* CTA Button */}
         <a
-          href={`https://wa.me/97430773060?text=${whatsappMessage}`}
+          href={`https://wa.me/97430773939?text=${whatsappMessage}`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 btn-gold px-4 py-3 rounded-lg text-sm font-semibold w-full mt-auto"

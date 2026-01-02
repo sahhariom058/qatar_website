@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="text-sm text-[#CBD5E1] hover:text-[#D4AF37]"
                 >
-                  +974 3077 3060
+                  +974 3077 3939
                 </a>
               </div>
             </div>

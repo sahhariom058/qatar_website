@@ -7,7 +7,7 @@ interface SocialIconsProps {
 }
 
 const SocialIcons: React.FC<SocialIconsProps> = ({ className = '', iconSize = 20 }) => {
-  const whatsappLink = "https://wa.me/97430773060?text=Hello%2C%20I%20contacted%20you%20from%20your%20website.";
+  const whatsappLink = "https://wa.me/97430773939?text=Hello%2C%20I%20contacted%20you%20from%20your%20website.";
 
   const socialLinks = [
     { icon: Facebook, label: 'Facebook' },

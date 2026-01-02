@@ -8,7 +8,8 @@ const WhatsAppButton: React.FC = () => {
   const { t } = useLanguage();
 
   const whatsappNumbers = [
-    { number: '+974 30773060', display: '+974 30773060' },
+    
+    { number: '+974 30773939', display: '+974 30773939' },
   ];
 
   const defaultMessage = encodeURIComponent(t('cta.whatsappMessage'));

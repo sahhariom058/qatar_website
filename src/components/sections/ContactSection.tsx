@@ -15,7 +15,7 @@ const ContactSection: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const whatsappNumbers = ['+974 30773060'];
+  const whatsappNumbers = ['+974 30773939'];
   const emails = ['aftab@excitel-ts.com', 'shaahi@excitel-ts.com', 'syed@excitel-ts.com', 'info@excitel-ts.com'];
 
   const services = [
@@ -51,7 +51,7 @@ Service: ${formData.service}
 Message: ${formData.message}
     `.trim();
 
-    const whatsappUrl = `https://wa.me/97430773060?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/97430773939?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 
     toast.success(language === 'en' ? 'Request sent successfully!' : 'تم إرسال الطلب بنجاح!');

@@ -95,7 +95,7 @@ const HeroSection: React.FC = () => {
  text-sm block mb-1">WhatsApp</span>
                     <a href="tel:+97430773060" className="block text-white dark:text-white
  hover:text-accent text-sm">
-                      +974 3077 3060
+                      +974 3077 3939
                     </a>
                   </div>
                 </div>
